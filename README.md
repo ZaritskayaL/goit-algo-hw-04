@@ -18,15 +18,16 @@ Exit the program: exit or bye
 <!-- PROJECT STRUCTURE FOR HOME WORK+BOT (main.py) -->
 
 goit_algo_hw_03/
-│── main.py
-│── home_work.py
-│── goit-algo-hw-04.py
+│── _pycache_
+│── bot.py
+|── colorama.py
+│── path_module.py
 │── README.md
 │── cats_file.txt
 │── salary_file.txt
 │── .venv/
 
-main.py  
+bot.py  
 Contains the full logic of the bot:
 
 command parsing
@@ -35,11 +36,9 @@ functions for adding, changing, and showing contacts
 
 main loop for user interaction
 
-home_work.py  
-Additional tasks from the course (not required for the bot).
 
 <!-- HOW TO RUN: -->
-Terminal: python main.py 
+Terminal: python bot.py 
 
 Enter a command: hello
 How can I help you?

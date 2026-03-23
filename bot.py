@@ -81,7 +81,7 @@ def main():
             if len(args) != 1:
                 print("Please provide exactly name.")
             else:
-                print(show_phone(args[0], contacts))
+                print(show_phone(args, contacts))
         elif command == 'all':
             print(show_all(contacts))
         else:

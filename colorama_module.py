@@ -10,10 +10,10 @@ def list_directory_recursive(path: Path, indent: int = 0):
     
     for item in path.iterdir():
         if item.is_dir():
-            print(prefix + Fore.BLUE + '[DIR] ' + Style.RESET_ALL + ' ' + item.name)
+            print(prefix + Fore.BLUE + '[DIR] ' + Style.RESET_ALL + item.name)
             list_directory_recursive(item, indent + 4)
         else: 
-            print(prefix + Fore.BLUE + '[DIR]' + Style.RESET_ALL + ' ' + item.name)
+            print(prefix + Fore.BLUE + '[FILE]' + Style.RESET_ALL + ' ' + item.name)
             
             
 def main():

@@ -21,22 +21,31 @@ def add_contact(args, contacts):
 def change_contact(args, contacts):
     if len(args) != 2:
         return 'Invalid command format. Use: add [name] [phone]'
+    
     name, new_phone = args
+    
     if name not in contacts:
         return 'Contact not found.'
-    if name not in contacts:
-        return 'Contact not found'
-    old_phone = contacts[name]
+    # old_phone = contacts[name]
     contacts[name] = new_phone
+    
     return f'Phone for {name} changed'
 
     
 def show_phone(args, contacts):
-    name = args[0] if args else None
-    if not name:
+    if not args:
         return 'Enter name'
+    
+    name = args[0]
+    
     if name in contacts:
-        return f'{contacts}'
+        phone = contacts[name]
+        return f'{name}: {phone}'
+    # name = args[0] if args else None
+    # if not name:
+    #     return 'Enter name'
+    # if name in contacts:
+    #     return contacts[name]
     else:
         return 'Contact not fouund'
     
